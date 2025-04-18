@@ -1,0 +1,42 @@
+<!-- <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Test Name</th>
+        <th>Total Questions</th>
+        <th>Correct Answers</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let test of testResults">
+        <td>{{ test.id }}</td>
+        <td>{{ test.testName ? test.testName : 'N/A' }}</td>
+        <td>{{ test.totalQuestions }}</td>
+        <td>{{ test.correctAnswers }}</td>
+        <td>{{ test.percentage }}%</td>
+      </tr>
+    </tbody>
+  </table>
+   -->
+   <table border="1">
+    <thead>
+      <tr>
+        <th>Attempt Number</th>
+        <th>Test Name</th>
+        <th>Total Questions</th>
+        <th>Correct Answers</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let test of testResults">
+        <td>{{ test.attemptNumber }}</td>
+        <td>{{ test.testName }}</td>
+        <td>{{ test.totalQuestions }}</td>
+        <td>{{ test.correctAnswers }}</td>
+        <td>{{ test.percentage }}%</td>
+      </tr>
+    </tbody>
+  </table>
+  

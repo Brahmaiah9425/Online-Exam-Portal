@@ -1,0 +1,24 @@
+.questions-container {
+    padding: 20px;
+  }
+  
+  .question-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .options-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .options-list li {
+    margin: 5px 0;
+  }
+  
+  .options-list input {
+    margin-right: 10px;
+  }
+  

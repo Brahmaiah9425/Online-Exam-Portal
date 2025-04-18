@@ -1,0 +1,35 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 57px;
+    background-color: #003973;
+    height: 60px; 
+  }
+ 
+  .main-header a {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none; 
+  }
+ 
+  .nav-links {
+    display: flex;
+    gap: 20px; 
+  }
+ 
+  .nav-links a {
+    color: white; 
+    font-weight: 300; 
+  }
+ 
+  .nav-links a.active {
+    background: #F48023; 
+  }
+ 
+  .nav-links a:hover {
+    color: white;
+    background: #141a33; 
+  }
+ 

@@ -1,0 +1,197 @@
+<!-- <div class="add-question-container">
+  <h2 class="title">Add Question to Test</h2>
+
+  <form [formGroup]="questionForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+          <label for="questionText">Question</label>
+          <input
+              id="questionText"
+              formControlName="questionText"
+              type="text"
+              class="form-control"
+              placeholder="Enter the question text"
+              (blur)="questionForm.patchValue({ questionText: questionForm.value.questionText.trim() })"
+          />
+          <div *ngIf="questionForm.get('questionText')?.invalid && questionForm.get('questionText')?.touched" class="error">
+              Question is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="optionA">Option A</label>
+          <input
+              id="optionA"
+              formControlName="optionA"
+              type="text"
+              class="form-control"
+              placeholder="Enter Option A"
+              (blur)="questionForm.patchValue({ optionA: questionForm.value.optionA.trim() })"
+          />
+          <div *ngIf="questionForm.get('optionA')?.invalid && questionForm.get('optionA')?.touched" class="error">
+              Option A is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="optionB">Option B</label>
+          <input
+              id="optionB"
+              formControlName="optionB"
+              type="text"
+              class="form-control"
+              placeholder="Enter Option B"
+              (blur)="questionForm.patchValue({ optionB: questionForm.value.optionB.trim() })"
+          />
+          <div *ngIf="questionForm.get('optionB')?.invalid && questionForm.get('optionB')?.touched" class="error">
+              Option B is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="optionC">Option C</label>
+          <input
+              id="optionC"
+              formControlName="optionC"
+              type="text"
+              class="form-control"
+              placeholder="Enter Option C"
+              (blur)="questionForm.patchValue({ optionC: questionForm.value.optionC.trim() })"
+          />
+          <div *ngIf="questionForm.get('optionC')?.invalid && questionForm.get('optionC')?.touched" class="error">
+              Option C is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="optionD">Option D</label>
+          <input
+              id="optionD"
+              formControlName="optionD"
+              type="text"
+              class="form-control"
+              placeholder="Enter Option D"
+              (blur)="questionForm.patchValue({ optionD: questionForm.value.optionD.trim() })"
+          />
+          <div *ngIf="questionForm.get('optionD')?.invalid && questionForm.get('optionD')?.touched" class="error">
+              Option D is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="correctOption">Correct Option</label>
+          <select
+              id="correctOption"
+              formControlName="correctOption"
+              class="form-control"
+              (change)="questionForm.patchValue({ correctOption: questionForm.value.correctOption.toUpperCase().trim() })"
+          >
+              <option value="" disabled>Select correct option</option>
+              <option value="A">Option A</option>
+              <option value="B">Option B</option>
+              <option value="C">Option C</option>
+              <option value="D">Option D</option>
+          </select>
+          <div *ngIf="questionForm.get('correctOption')?.invalid && questionForm.get('correctOption')?.touched" class="error">
+              Correct Option is required.
+          </div>
+      </div>
+
+      <div class="form-actions">
+          <button type="submit" class="btn btn-primary" [disabled]="questionForm.invalid">
+              Submit
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="router.navigateByUrl('/admin/dashboard')">
+              Cancel
+          </button>
+      </div>
+  </form>
+</div> -->
+<!-- <div class="container">
+  <h2>Add Question to Test</h2>
+
+  <form [formGroup]="questionForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Question Text</label>
+      <input nz-input formControlName="questionText" placeholder="Enter question" />
+      <div *ngIf="questionForm.controls['questionText'].invalid && questionForm.controls['questionText'].touched" class="error">
+        Question is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Option A</label>
+      <input nz-input formControlName="optionA" placeholder="Enter option A" />
+    </div>
+
+    <div class="form-group">
+      <label>Option B</label>
+      <input nz-input formControlName="optionB" placeholder="Enter option B" />
+    </div>
+
+    <div class="form-group">
+      <label>Option C</label>
+      <input nz-input formControlName="optionC" placeholder="Enter option C" />
+    </div>
+
+    <div class="form-group">
+      <label>Option D</label>
+      <input nz-input formControlName="optionD" placeholder="Enter option D" />
+    </div>
+
+    <div class="form-group">
+      <label>Correct Option (A/B/C/D)</label>
+      <input nz-input formControlName="correctOption" placeholder="Enter correct option" />
+      <div *ngIf="questionForm.controls['correctOption'].invalid && questionForm.controls['correctOption'].touched" class="error">
+        Correct option is required.
+      </div>
+    </div>
+
+    <button nz-button nzType="primary" [disabled]="questionForm.invalid">Submit</button>
+  </form>
+</div> -->
+<div class="container">
+  <h2>Add Question to Test</h2>
+
+  <form [formGroup]="questionForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Question Text</label>
+      <input class="form-control" formControlName="questionText" placeholder="Enter question" />
+      <div *ngIf="questionForm.controls['questionText'].invalid && questionForm.controls['questionText'].touched" class="error">
+        Question is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Option A</label>
+      <input class="form-control" formControlName="optionA" placeholder="Enter option A" />
+    </div>
+
+    <div class="form-group">
+      <label>Option B</label>
+      <input class="form-control" formControlName="optionB" placeholder="Enter option B" />
+    </div>
+
+    <div class="form-group">
+      <label>Option C</label>
+      <input class="form-control" formControlName="optionC" placeholder="Enter option C" />
+    </div>
+
+    <div class="form-group">
+      <label>Option D</label>
+      <input class="form-control" formControlName="optionD" placeholder="Enter option D" />
+    </div>
+
+    <div class="form-group">
+      <label>Correct Option (A/B/C/D)</label>
+      <input class="form-control" formControlName="correctOption" placeholder="Enter correct option" />
+      <div *ngIf="questionForm.controls['correctOption'].invalid && questionForm.controls['correctOption'].touched" class="error">
+        Correct option is required.
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary" [disabled]="questionForm.invalid">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="router.navigateByUrl('/admin/dashboard')">Cancel</button>
+    </div>
+  </form>
+</div>

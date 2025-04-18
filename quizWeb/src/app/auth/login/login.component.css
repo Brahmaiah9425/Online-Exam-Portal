@@ -1,0 +1,124 @@
+/* Background styling */
+.bg {
+  background-color: #f5efef;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parent container */
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Child container (login box) */
+.child {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Login title */
+.imgDiv h1 {
+  text-align: center;
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form input fields */
+input[nz-input] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+input[nz-input]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Error message styling */
+nz-form-control .ant-form-item-explain {
+  color: red;
+  font-size: 12px;
+}
+
+/* Submit button styling */
+.custom-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Submit button hover effect */
+.custom-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Register link */
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Box shadow on hover */
+.child:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Message styling */
+.nz-message {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nz-message-success {
+  background-color: #52c41a !important;
+  color: #ffffff !important;
+}
+
+.nz-message-error {
+  background-color: #f5222d !important;
+  color: #ffffff !important;
+}

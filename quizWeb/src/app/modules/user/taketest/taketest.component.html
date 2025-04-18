@@ -1,0 +1,65 @@
+<!-- <div class="timer-container">
+  <div class="timer-box">
+    Time remaining: {{ getFormattedTime() }}
+  </div>
+</div>
+
+<div class="questions-container">
+  <form>
+    <div *ngFor="let question of questions; let i = index" class="question-card">
+      <h3>{{ question.questionText }}</h3>
+      <ul class="options-list">
+        <li *ngFor="let option of ['A', 'B', 'C', 'D']; let j = index">
+          <input 
+            type="radio" 
+            [id]="'option' + option + '_' + i" 
+            name="question_{{ question.id }}" 
+            [value]="question['option' + option]" 
+            (change)="onAnswerChange(question.id, question['option' + option])"
+          >
+          <label [for]="'option' + option + '_' + i">{{ question['option' + option] }}</label>
+        </li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 20px; margin-bottom: 20px; float: right;">
+      <button nz-button nzType="primary" type="button" (click)="submitAnswers()" [disabled]="isTestSubmitted">
+        Submit Answers
+      </button>
+    </div>
+  </form>
+</div> -->
+<div class="container">
+  <h2>Take Test</h2>
+
+  <div class="timer">
+    Time Remaining: <strong>{{ getFormattedTime() }}</strong>
+  </div>
+
+  <form *ngIf="questions.length > 0">
+    <div *ngFor="let question of questions">
+      <h3>{{ question.questionText }}</h3>
+
+      <div *ngFor="let option of [question.optionA, question.optionB, question.optionC, question.optionD]">
+        <label>
+          <input
+            type="radio"
+            name="question{{ question.id }}"
+            [value]="option"
+            (change)="onAnswerChange(question.id, option)"
+            [checked]="selectedAnswers[question.id] === option"
+          />
+          {{ option }}
+        </label>
+      </div>
+    </div>
+
+    <button type="button" (click)="submitAnswers()" [disabled]="isTestSubmitted">
+      Submit Test
+    </button>
+  </form>
+
+  <p *ngIf="isTestSubmitted" class="submitted-message">
+    Test submitted successfully!
+  </p>
+</div>
