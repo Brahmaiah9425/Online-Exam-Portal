@@ -1,0 +1,73 @@
+.main {
+    padding: 20px;
+}
+
+.nz-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nz-col {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.test {
+    background-color:rgb(165, 242, 132);
+    padding: 20px; /* Increased padding for a larger card */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Ensures title and buttons are on opposite sides */
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+.test .test-info {
+    flex-grow: 1;
+    margin-right: 20px; /* Ensure space between content and buttons */
+}
+
+.test .ant-card-head {
+    background-color: #1890ff;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.test p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.test .button-container {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.test .ant-btn {
+    margin-top: 10px;
+    width: 150px; /* Ensure button width is consistent */
+}
+
+.test .ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+    color: white;
+    width: 150px;
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+.test .ant-btn-primary:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+}
+
+.test button:last-child {
+    margin-right: 0;
+}

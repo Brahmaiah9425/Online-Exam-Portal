@@ -1,0 +1,24 @@
+<div class="questions-container">
+    <div *ngFor="let question of questions; let i = index" class="question-card">
+      <h3>{{ question.questionText }}</h3>
+      <ul class="options-list">
+        <li>
+          <input type="radio" [id]="'optionA_' + i" name="question_{{ i }}" [value]="question.optionA">
+          <label [for]="'optionA_' + i">{{ question.optionA }}</label>
+        </li>
+        <li>
+          <input type="radio" [id]="'optionB_' + i" name="question_{{ i }}" [value]="question.optionB">
+          <label [for]="'optionB_' + i">{{ question.optionB }}</label>
+        </li>
+        <li>
+          <input type="radio" [id]="'optionC_' + i" name="question_{{ i }}" [value]="question.optionC">
+          <label [for]="'optionC_' + i">{{ question.optionC }}</label>
+        </li>
+        <li>
+          <input type="radio" [id]="'optionD_' + i" name="question_{{ i }}" [value]="question.optionD">
+          <label [for]="'optionD_' + i">{{ question.optionD }}</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,34 @@
+<div class="main">
+    <div class="search-container">
+      <input 
+        type="text" 
+        [(ngModel)]="searchText" 
+        (input)="onSearchChange()" 
+        placeholder="Search by Test Name" 
+        class="search-input"
+      />
+      <button class="search-button" (click)="onSearchChange()">Search</button>
+    </div>
+    
+    <div class="test-list">
+      <div class="test-item" *ngFor="let test of filteredTests">
+        <div class="test-header">
+          <h3>{{ test.title }}</h3>
+        </div>
+        <div class="test-details">
+          <p class="test-time">{{ getFormattedTime(test.time) }}</p>
+          <p class="test-description">
+            <strong>Description:</strong> {{ test.description }}
+          </p>
+        </div>
+        <div class="test-footer">
+          <button 
+            class="start-button" 
+            [routerLink]="'/user/take-test/' + test.id">
+            Start Test
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

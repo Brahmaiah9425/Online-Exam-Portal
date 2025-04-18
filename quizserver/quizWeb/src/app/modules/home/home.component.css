@@ -1,0 +1,109 @@
+/* Home Page Styles */
+.home-container {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(135deg, #dbe783, #9fd0e4,#e284b8,rgb(225, 117, 117)); */
+    background-color: rgb(249, 245, 238);
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(90deg, #cd87e8, #897aea); /* Deep purple to blue */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-size: 36px;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Welcome Section */
+.welcome {
+    margin-top: 50px;
+    font-size: 18px;
+    animation: slideIn 2s ease-out;
+    color: #1e2125; /* Darker for contrast */
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #4c0546de; /* Dark purple */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Guidance Section */
+.guidance {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #b39ddb, #7986cb); /* Soft purple-blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(14, 1, 1, 0.2);
+    color: white;
+}
+
+/* Route Map */
+.route-map {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.route-step {
+    background: linear-gradient(120deg, #a5b4fc, #c3a2f5); /* Softer complement to the background */
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.route-step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.route-step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #f0f0f0;
+    background: linear-gradient(90deg, #7e57c2, #5c6bc0); 
+    padding: 15px;
+    border-radius: 8px;
+} */
+ /* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #f0f0f0;
+    /* background: linear-gradient(90deg, #8e44ad, #c0392b); */
+    background-color: #1e2125;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
